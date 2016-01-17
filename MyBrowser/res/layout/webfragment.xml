@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/webLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+    <Button
+            android:id="@+id/stopURL"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/StopURL"
+            android:textSize="12sp"/>
+
+    <Button
+            android:id="@+id/confirmURL"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/stopURL"
+            android:text="@string/ConfirmURL"
+            android:textSize="12sp"/>
+
+    <EditText
+            android:id="@+id/myEditURL"
+            android:inputType="textUri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/confirmURL"
+            android:hint="@string/MyEditURL"/>
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <Button
+                    android:id="@+id/backURL"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/BackURL"
+                    android:textSize="12sp"/>
+
+            <Button
+                    android:id="@+id/forwardURL"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/ForwardURL"
+                    android:textSize="12sp"/>
+
+            <Button
+                    android:id="@+id/saveURL"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/SaveURL"
+                    android:textSize="12sp"/>
+
+            <Button
+                    android:id="@+id/refreshURL"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/RefreshURL"
+                    android:textSize="12sp"/>
+            <Button
+                    android:id="@+id/menu"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/menu"
+                    android:textSize="12sp"/>
+    </LinearLayout>
+
+    <WebView
+            android:id="@+id/myWebVIew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/myEditURL"
+            android:layout_above="@id/linearLayout"/>
+
+</RelativeLayout>
